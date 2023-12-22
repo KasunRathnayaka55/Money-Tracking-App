@@ -1,0 +1,87 @@
+main {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+
+    .cents{
+      font-size:32px;
+    }
+  }
+
+  .basic{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: dense;
+    grid-auto-rows: minmax(30px,auto);
+    gap: 10px;
+    
+    .form-input{
+      border-radius: 5px;
+      background-color: transparent;
+      width: 300px;
+      bottom: 2px solid #30313d;
+      gap: 10px;
+      color:#7c7d8b;
+    }
+
+    .description{
+      border-radius: 5px;
+      grid-column: span 2;
+      width: 620px;
+    }
+
+    .submit{
+      border-radius: 5px;
+      grid-column: span 2;
+      padding: 8px;
+    }
+  }
+  .transaction{
+    display: flex;
+    justify-content: space-between;
+    min-width: 600px;
+
+    .left{
+      .name{
+        font-size: x-large;
+      }
+      .description{
+        font-size: small;
+        color:#87878f;
+      }
+    }
+    .right{
+      text-align: right;
+
+      .price{
+        font-size: x-large;
+      }
+      .datetime{
+        font-size: small;
+        color:#87878f;
+      }
+    }
+
+  }
+}
+
+.green{
+  color: #1c1;
+}
+.red{
+  color: #c11;
+}
+body {
+  background-color: #17181f;
+  color: #ddd;
+}

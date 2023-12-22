@@ -35,6 +35,7 @@ function App() {
     }).then((response) => {
       response.json().then((json) => {
         console.log("result ", json);
+        alert("Transaction Added")
       });
     });
   }

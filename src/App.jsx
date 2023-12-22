@@ -12,14 +12,14 @@ function App() {
   }, []);
 
   async function getTrasaction() {
-    const url = "http://localhost:3000/api/transactions";
+    const url = "https://money-traking-app.onrender.com/api/transactions";
     const response = await fetch(url);
     return await response.json();
   }
 
   function addNewTransaction(ev) {
     ev.preventDefault();
-    const url = "http://localhost:3000/api/transaction";
+    const url = "https://money-traking-app.onrender.com/api/transaction";
 
     const price = name.split(" ")[0];
 

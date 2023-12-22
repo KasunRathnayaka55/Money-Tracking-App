@@ -35,20 +35,22 @@ function App() {
     }).then((response) => {
       response.json().then((json) => {
         console.log("result ", json);
-        alert("Transaction Added")
+        alert("Transaction Added");
+        getTrasaction().then(setTransactions);
       });
     });
   }
 
-  let balance = 0
-  for(const transaction of transactions){
-    balance = balance + transaction.price
+  let balance = 0;
+  for (const transaction of transactions) {
+    balance = balance + transaction.price;
   }
   return (
     <>
       <main>
         <h1>
-          {balance}<span className="cents">.00</span>
+          {balance}
+          <span className="cents">.00</span>
         </h1>
         <form onSubmit={addNewTransaction}>
           <div className="basic">
@@ -90,7 +92,13 @@ function App() {
                   </div>
 
                   <div className="right">
-                    <div className={"price "+(transaction.price>0 ? "green":"red")}>{transaction.price}</div>
+                    <div
+                      className={
+                        "price " + (transaction.price > 0 ? "green" : "red")
+                      }
+                    >
+                      {transaction.price}
+                    </div>
                     <div className="datetime">{transaction.date}</div>
                   </div>
                 </div>
